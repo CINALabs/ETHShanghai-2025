@@ -317,23 +317,13 @@ echo $NEXT_PUBLIC_RPC_URL
 - 检查 RPC URL 和 Chain ID
 - 重启浏览器和 MetaMask
 
-## 6. 团队与联系信息
+## 6. 参赛团队信息
 
-### 6.1 开发团队
-- **智能合约开发**: 基于 f(x) 协议构建
-- **前端开发**: Next.js + Wagmi 技术栈
-- **测试**: Foundry + Hardhat 测试框架
-
-### 6.2 技术支持
-- **文档**: 查看 `contracts/` 和 `frontend/` 目录下的详细文档
-- **问题反馈**: 通过 GitHub Issues 提交
-- **社区**: 加入我们的 Discord 社区
-
-### 6.3 重要链接
-- **GitHub**: https://github.com/CINALabs/ETHShanghai-2025
-- **文档**: https://docs.cina-protocol.com
-- **测试网**: https://sepolia.etherscan.io/
-- **水龙头**: https://sepoliafaucet.com/
+- **Gavin** Lead
+- **segment7** Dev
+- **Leaf** Dev
+- **超** Dev
+- **文斌** Dev
 
 ## 7. 相关文档
 
