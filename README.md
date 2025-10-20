@@ -124,14 +124,46 @@ CINA Protocol 是基于 f(x) 协议构建的去中心化杠杆交易系统，通
 |---------|------|---------|---------|
 | **PoolManager** | `0xBb644076500Ea106d9029B382C4d49f56225cB82` | ✅ 已验证 | 池子管理系统 |
 | **FxUSD** | `0x085a1b6da46aE375b35Dea9920a276Ef571E209c` | ✅ 已验证 | 协议稳定币 |
+| **FxUSDBasePool** | `0x420D6b8546F14C394A703F5ac167619760A721A9` | ✅ 已验证 | 基础池子 |
+| **PegKeeper** | `0x628648849647722144181c9CB5bbE0CCadd50029` | ✅ 已验证 | 锚定保持器 |
+| **PoolConfiguration** | `0x35456038942C91eb16fe2E33C213135E75f8d188` | ✅ 已验证 | 池子配置 |
 | **AaveFundingPool** | `0x3C67A6Fea47A00f2Ce6D3c1D1f170558d2b091AB` | ⏳ 待验证 | 资金池实现 |
 | **MockPriceOracle** | `0x0347f7d0952b3c55E276D42b9e2950Cc0523d787` | ✅ 已验证 | 价格预言机 |
 
+#### 4.2.3 基础设施合约
+| 合约名称 | 地址 | 验证状态 | 功能描述 |
+|---------|------|---------|---------|
+| **EmptyContract** | `0x9cca415aa29f39e46318b60ede8155a7041260b8` | ✅ 已验证 | 基础设施合约 |
+| **ProxyAdmin** | `0x7bc6535d75541125fb3b494decfde10db20c16d8` | ✅ 已验证 | 代理管理 |
+| **MockTokenConverter** | `0xc3505d17e4274c925e9c736b947fffbdafcdab27` | ✅ 已验证 | 代币转换器 |
+| **MultiPathConverter** | `0xc6719ba6caf5649be53273a77ba812f86dcdb951` | ✅ 已验证 | 多路径转换器 |
+
 ### 4.3 Etherscan 验证链接
-- **Router**: https://sepolia.etherscan.io/address/0xB8B3e6C7D0f0A9754F383107A6CCEDD8F19343Ec
+
+#### Router 系统
+- **Router (Diamond)**: https://sepolia.etherscan.io/address/0xB8B3e6C7D0f0A9754F383107A6CCEDD8F19343Ec
+- **DiamondCutFacet**: https://sepolia.etherscan.io/address/0x1adb1d517f0fAd6695Ac5907CB16276FaC1C3e8B
+- **DiamondLoupeFacet**: https://sepolia.etherscan.io/address/0x28909aA9fA21e06649F0E9A0a67E7CcabAAef947
+- **OwnershipFacet**: https://sepolia.etherscan.io/address/0xf662BA47BE8d10a9573afb2553EDA46db3854715
+- **RouterManagementFacet**: https://sepolia.etherscan.io/address/0xD3A63FfBE2EDa3D0E07426346189000f39fDa1C0
+- **MorphoFlashLoanCallbackFacet**: https://sepolia.etherscan.io/address/0x7DfE7037d407af7d5B84f0aeE56f8466ce0AC150
+- **PositionOperateFlashLoanFacetV2**: https://sepolia.etherscan.io/address/0x6403A2D1A99e15369A1f5C46fA2983C619D0B410
+- **FxUSDBasePoolV2Facet**: https://sepolia.etherscan.io/address/0x08aD9003331FFDbe727354711bE1E8a67646C460
+
+#### 核心协议
 - **PoolManager**: https://sepolia.etherscan.io/address/0xBb644076500Ea106d9029B382C4d49f56225cB82
 - **FxUSD**: https://sepolia.etherscan.io/address/0x085a1b6da46aE375b35Dea9920a276Ef571E209c
+- **FxUSDBasePool**: https://sepolia.etherscan.io/address/0x420D6b8546F14C394A703F5ac167619760A721A9
+- **PegKeeper**: https://sepolia.etherscan.io/address/0x628648849647722144181c9CB5bbE0CCadd50029
+- **PoolConfiguration**: https://sepolia.etherscan.io/address/0x35456038942C91eb16fe2E33C213135E75f8d188
+- **AaveFundingPool**: https://sepolia.etherscan.io/address/0x3C67A6Fea47A00f2Ce6D3c1D1f170558d2b091AB
 - **MockPriceOracle**: https://sepolia.etherscan.io/address/0x0347f7d0952b3c55E276D42b9e2950Cc0523d787
+
+#### 基础设施
+- **EmptyContract**: https://sepolia.etherscan.io/address/0x9cca415aa29f39e46318b60ede8155a7041260b8
+- **ProxyAdmin**: https://sepolia.etherscan.io/address/0x7bc6535d75541125fb3b494decfde10db20c16d8
+- **MockTokenConverter**: https://sepolia.etherscan.io/address/0xc3505d17e4274c925e9c736b947fffbdafcdab27
+- **MultiPathConverter**: https://sepolia.etherscan.io/address/0xc6719ba6caf5649be53273a77ba812f86dcdb951
 
 ## 5. 运行与复现说明
 
