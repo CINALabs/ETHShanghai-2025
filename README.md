@@ -1,17 +1,16 @@
-# CINA Protocol: 技术白皮书
+# cina
 
-**版本**: 1.0  
-**日期**: 2025年1月15日  
+**日期**: 2025年1o月20日  
 **运营方**: CINA Labs
 
 ## 1. 摘要
 
-CINA Protocol 是基于 f(x) 协议构建的去中心化杠杆交易系统，通过闪电贷机制实现零资本杠杆交易。协议采用 Diamond 架构（ERC-2535）提供模块化功能扩展，支持用户使用 stETH 作为抵押物进行杠杆交易，通过聚合多个流动性源提供最优交易路径。
+**cina** 是基于 f(x) 协议构建的去中心化杠杆交易系统，通过闪电贷机制实现零资本杠杆交易。协议采用 Diamond 架构（ERC-2535）提供模块化功能扩展，支持用户使用 USDC/WRMB/stETH 作为抵押物进行杠杆交易，通过聚合多个流动性源提供最优交易路径。
 
 ## 2. 项目概述
 
 ### 2.1 项目名称
-**CINA Protocol** - 去中心化杠杆交易协议
+**cina**
 
 ### 2.2 核心价值主张
 - **零资本杠杆**: 通过闪电贷机制实现无需初始资本的杠杆交易
@@ -107,63 +106,37 @@ CINA Protocol 是基于 f(x) 协议构建的去中心化杠杆交易系统，通
 ### 4.1 网络配置
 - **测试网**: Sepolia
 - **链 ID**: 11155111
-- **RPC URL**: https://sepolia.infura.io/v3/YOUR_PROJECT_ID
+- **RPC URL**
 
 ### 4.2 核心合约地址
 
-#### 4.2.1 Router 系统 (Diamond 架构)
-| 合约名称 | 地址 | 验证状态 | 功能描述 |
-|---------|------|---------|---------|
-| **Router (Diamond)** | `0xB8B3e6C7D0f0A9754F383107A6CCEDD8F19343Ec` | ⏳ 待验证 | 核心路由合约 |
-| **DiamondCutFacet** | `0x1adb1d517f0fAd6695Ac5907CB16276FaC1C3e8B` | ⏳ 待验证 | 合约升级管理 |
-| **RouterManagementFacet** | `0xD3A63FfBE2EDa3D0E07426346189000f39fDa1C0` | ⏳ 待验证 | 路由管理 |
-| **PositionOperateFacet** | `0x6403A2D1A99e15369A1f5C46fA2983C619D0B410` | ⏳ 待验证 | 仓位操作 |
-
-#### 4.2.2 核心协议合约
-| 合约名称 | 地址 | 验证状态 | 功能描述 |
-|---------|------|---------|---------|
-| **PoolManager** | `0xBb644076500Ea106d9029B382C4d49f56225cB82` | ✅ 已验证 | 池子管理系统 |
-| **FxUSD** | `0x085a1b6da46aE375b35Dea9920a276Ef571E209c` | ✅ 已验证 | 协议稳定币 |
-| **FxUSDBasePool** | `0x420D6b8546F14C394A703F5ac167619760A721A9` | ✅ 已验证 | 基础池子 |
-| **PegKeeper** | `0x628648849647722144181c9CB5bbE0CCadd50029` | ✅ 已验证 | 锚定保持器 |
-| **PoolConfiguration** | `0x35456038942C91eb16fe2E33C213135E75f8d188` | ✅ 已验证 | 池子配置 |
-| **AaveFundingPool** | `0x3C67A6Fea47A00f2Ce6D3c1D1f170558d2b091AB` | ⏳ 待验证 | 资金池实现 |
-| **MockPriceOracle** | `0x0347f7d0952b3c55E276D42b9e2950Cc0523d787` | ✅ 已验证 | 价格预言机 |
-
-#### 4.2.3 基础设施合约
-| 合约名称 | 地址 | 验证状态 | 功能描述 |
-|---------|------|---------|---------|
-| **EmptyContract** | `0x9cca415aa29f39e46318b60ede8155a7041260b8` | ✅ 已验证 | 基础设施合约 |
-| **ProxyAdmin** | `0x7bc6535d75541125fb3b494decfde10db20c16d8` | ✅ 已验证 | 代理管理 |
-| **MockTokenConverter** | `0xc3505d17e4274c925e9c736b947fffbdafcdab27` | ✅ 已验证 | 代币转换器 |
-| **MultiPathConverter** | `0xc6719ba6caf5649be53273a77ba812f86dcdb951` | ✅ 已验证 | 多路径转换器 |
-
-### 4.3 Etherscan 验证链接
-
 #### Router 系统
-- **Router (Diamond)**: https://sepolia.etherscan.io/address/0xB8B3e6C7D0f0A9754F383107A6CCEDD8F19343Ec
-- **DiamondCutFacet**: https://sepolia.etherscan.io/address/0x1adb1d517f0fAd6695Ac5907CB16276FaC1C3e8B
-- **DiamondLoupeFacet**: https://sepolia.etherscan.io/address/0x28909aA9fA21e06649F0E9A0a67E7CcabAAef947
-- **OwnershipFacet**: https://sepolia.etherscan.io/address/0xf662BA47BE8d10a9573afb2553EDA46db3854715
-- **RouterManagementFacet**: https://sepolia.etherscan.io/address/0xD3A63FfBE2EDa3D0E07426346189000f39fDa1C0
-- **MorphoFlashLoanCallbackFacet**: https://sepolia.etherscan.io/address/0x7DfE7037d407af7d5B84f0aeE56f8466ce0AC150
-- **PositionOperateFlashLoanFacetV2**: https://sepolia.etherscan.io/address/0x6403A2D1A99e15369A1f5C46fA2983C619D0B410
-- **FxUSDBasePoolV2Facet**: https://sepolia.etherscan.io/address/0x08aD9003331FFDbe727354711bE1E8a67646C460
+
+* [Router (Diamond)](https://sepolia.etherscan.io/address/0x2F1Cdbad93806040c353Cc87a5a48142348B6AfD)
+* [DiamondCutFacet](https://sepolia.etherscan.io/address/0x1adb1d517f0fAd6695Ac5907CB16276FaC1C3e8B)
+* [DiamondLoupeFacet](https://sepolia.etherscan.io/address/0x28909aA9fA21e06649F0E9A0a67E7CcabAAef947)
+* [OwnershipFacet](https://sepolia.etherscan.io/address/0xf662BA47BE8d10a9573afb2553EDA46db3854715)
+* [RouterManagementFacet](https://sepolia.etherscan.io/address/0xD3A63FfBE2EDa3D0E07426346189000f39fDa1C0)
+* [MorphoFlashLoanCallbackFacet](https://sepolia.etherscan.io/address/0x7DfE7037d407af7d5B84f0aeE56f8466ce0AC150)
+* [PositionOperateFlashLoanFacetV2](https://sepolia.etherscan.io/address/0x6403A2D1A99e15369A1f5C46fA2983C619D0B410)
+* [FxUSDBasePoolV2Facet](https://sepolia.etherscan.io/address/0x08aD9003331FFDbe727354711bE1E8a67646C460)
 
 #### 核心协议
-- **PoolManager**: https://sepolia.etherscan.io/address/0xBb644076500Ea106d9029B382C4d49f56225cB82
-- **FxUSD**: https://sepolia.etherscan.io/address/0x085a1b6da46aE375b35Dea9920a276Ef571E209c
-- **FxUSDBasePool**: https://sepolia.etherscan.io/address/0x420D6b8546F14C394A703F5ac167619760A721A9
-- **PegKeeper**: https://sepolia.etherscan.io/address/0x628648849647722144181c9CB5bbE0CCadd50029
-- **PoolConfiguration**: https://sepolia.etherscan.io/address/0x35456038942C91eb16fe2E33C213135E75f8d188
-- **AaveFundingPool**: https://sepolia.etherscan.io/address/0x3C67A6Fea47A00f2Ce6D3c1D1f170558d2b091AB
-- **MockPriceOracle**: https://sepolia.etherscan.io/address/0x0347f7d0952b3c55E276D42b9e2950Cc0523d787
+
+* [PoolManager](https://sepolia.etherscan.io/address/0xBb644076500Ea106d9029B382C4d49f56225cB82)
+* [FxUSD](https://sepolia.etherscan.io/address/0x085a1b6da46aE375b35Dea9920a276Ef571E209c)
+* [FxUSDBasePool](https://sepolia.etherscan.io/address/0x420D6b8546F14C394A703F5ac167619760A721A9)
+* [PegKeeper](https://sepolia.etherscan.io/address/0x628648849647722144181c9CB5bbE0CCadd50029)
+* [PoolConfiguration](https://sepolia.etherscan.io/address/0x35456038942C91eb16fe2E33C213135E75f8d188)
+* [AaveFundingPool](https://sepolia.etherscan.io/address/0x3C67A6Fea47A00f2Ce6D3c1D1f170558d2b091AB)
+* [MockPriceOracle](https://sepolia.etherscan.io/address/0x0347f7d0952b3c55E276D42b9e2950Cc0523d787)
 
 #### 基础设施
-- **EmptyContract**: https://sepolia.etherscan.io/address/0x9cca415aa29f39e46318b60ede8155a7041260b8
-- **ProxyAdmin**: https://sepolia.etherscan.io/address/0x7bc6535d75541125fb3b494decfde10db20c16d8
-- **MockTokenConverter**: https://sepolia.etherscan.io/address/0xc3505d17e4274c925e9c736b947fffbdafcdab27
-- **MultiPathConverter**: https://sepolia.etherscan.io/address/0xc6719ba6caf5649be53273a77ba812f86dcdb951
+
+* [EmptyContract](https://sepolia.etherscan.io/address/0x9cca415aa29f39e46318b60ede8155a7041260b8)
+* [ProxyAdmin](https://sepolia.etherscan.io/address/0x7bc6535d75541125fb3b494decfde10db20c16d8)
+* [MockTokenConverter](https://sepolia.etherscan.io/address/0xc3505d17e4274c925e9c736b947fffbdafcdab27)
+* [MultiPathConverter](https://sepolia.etherscan.io/address/0xc6719ba6caf5649be53273a77ba812f86dcdb951)
 
 ## 5. 运行与复现说明
 
@@ -185,8 +158,7 @@ CINA Protocol 是基于 f(x) 协议构建的去中心化杠杆交易系统，通
 #### 5.2.1 项目初始化
 ```bash
 # 克隆项目
-git clone https://github.com/your-org/cina-protocol.git
-cd cina-protocol/app/v1
+git clone https://github.com/CINALabs/ETHShanghai-2025.git .
 
 # 安装合约依赖
 cd contracts
@@ -361,7 +333,7 @@ echo $NEXT_PUBLIC_RPC_URL
 - **社区**: 加入我们的 Discord 社区
 
 ### 6.3 重要链接
-- **GitHub**: https://github.com/your-org/cina-protocol
+- **GitHub**: https://github.com/CINALabs/ETHShanghai-2025
 - **文档**: https://docs.cina-protocol.com
 - **测试网**: https://sepolia.etherscan.io/
 - **水龙头**: https://sepoliafaucet.com/
@@ -378,9 +350,3 @@ echo $NEXT_PUBLIC_RPC_URL
 - [Sepolia 部署报告](contracts/SEPOLIA_FINAL_DEPLOYMENT_REPORT.md)
 - [合约地址列表](contracts/DEPLOYMENT_ADDRESSES.md)
 - [测试总结](contracts/FOUNDRY_测试总结.md)
-
----
-
-**项目状态**: 合约已部署，前端开发中  
-**最后更新**: 2025-01-15  
-**版本**: v1.0.0
